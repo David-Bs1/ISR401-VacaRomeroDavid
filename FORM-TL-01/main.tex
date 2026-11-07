@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{left=2.1cm,right=2.1cm,top=2.1cm,bottom=2.1cm}
+\usepackage{array,longtable,booktabs,tabularx,xcolor}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+\usepackage{enumitem}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.22}
+\definecolor{uteqverde}{RGB}{0,108,62}
+
+% Campos de la matriz: ID, tipo, producto/proceso, sistema/software, característica ISO, justificación.
+\newcommand{\req}[6]{%
+\texttt{#1} & #2 & #3 & #4 & #5 & #6 \\ \hline
+}
+\begin{document}
+\begin{center}
+{\small UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}\\
+{\small Facultad de Ciencias de la Computación y Diseño Digital -- Carrera de Ingeniería de Software}\\[5pt]
+{\Large\bfseries FORM-TL-01: Identificación y clasificación de tipos de requisitos}\\[3pt]
+{\normalsize Ingeniería de Requerimientos (ISR-401) -- 4.\textordmasculine{} nivel, paralelo A}
+\end{center}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}lX@{}}
+Caso: & Plataforma de gestión de citas médicas\\
+Estudiante: & Vaca Romero David Octavio\\
+Docente: & PhD. Gleiston Cicerón Guerrero Ulloa\\
+Fecha de entrega (SGA): & 7 de noviembre de 2026\\
+\end{tabularx}
+
+\section{Objetivo y alcance}
+Clasificar los 20 enunciados del caso de estudio en las dimensiones especificadas por la guía del taller: tipo de requisito, producto/proceso y sistema/software. Cuando corresponda, identificar la característica y subcaracterística de calidad según ISO/IEC 25010:2023~\cite{iso25010}. Fundamentar las decisiones mediante definiciones de ingeniería de requisitos~\cite{iso29148}.
+
+\section{Matriz de clasificación (E01--E20)}
+\textit{Nota de trabajo:} sustituir cada celda \emph{Pendiente} por una respuesta individual fundamentada y verificable. Los enunciados originales se reproducen en el anexo para conservar la trazabilidad.
+
+{\footnotesize
+\begin{longtable}{|p{0.9cm}|p{1.9cm}|p{1.7cm}|p{1.6cm}|p{2.7cm}|p{5.2cm}|}
+\hline
+\textbf{ID} & \textbf{Tipo} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{ISO 25010} & \textbf{Justificación breve}\\ \hline
+\endfirsthead
+\multicolumn{6}{l}{\small Continuación de la matriz de clasificación}\\
+\hline
+\textbf{ID} & \textbf{Tipo} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{ISO 25010} & \textbf{Justificación breve}\\ \hline
+\endhead
+\input{secciones/requisitos.tex}
+\end{longtable}
+}
+
+\section{Cuantificación de los cinco requisitos vagos}
+\input{secciones/calidad.tex}
+
+\section{Discusión y discrepancias reales}
+\input{secciones/discrepancias.tex}
+
+\section{Uso de herramientas de inteligencia artificial}
+ChatGPT (GPT-6) se utilizó para preparar la estructura inicial del documento LaTeX, las tablas editables y el README. La compilación de esta plantilla se verificó técnicamente; la clasificación de requisitos, sus métricas y las discrepancias deben ser completadas, contrastadas y verificadas por el estudiante antes de su entrega. Registrar aquí cualquier uso adicional de IA, su finalidad y la verificación humana realizada.
+
+\begin{thebibliography}{9}
+\bibitem{iso29148} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 29148:2018, Systems and software engineering --- Life cycle processes --- Requirements engineering}, 2018.
+\bibitem{iso25010} ISO/IEC, \emph{ISO/IEC 25010:2023, Systems and software engineering --- Systems and software Quality Requirements and Evaluation (SQuaRE) --- Product quality model}, 2023.
+\end{thebibliography}
+
+\appendix
+\section{Enunciados originales del caso}
+\input{secciones/enunciados.tex}
+\end{document}
