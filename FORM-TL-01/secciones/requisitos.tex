@@ -1,16 +1,16 @@
 % Clasificación propuesta para revisión académica. Verificar criterios discutibles con docente.
-% E09 se trata como restricción del dominio; podría analizarse como función regida por regla de negocio.
+% E09 se clasifica como funcional: la regla de dominio determina el comportamiento que debe ejecutar el software.
 % Campos: código, tipo, producto/proceso, sistema/software, ISO, justificación
 \req{E01}{Funcional}{Producto}{Software}{No aplica}{Define la operación de reservar una cita y seleccionar sus parámetros.}
-\req{E02}{Funcional}{Producto}{Sistema}{No aplica}{Exige enviar recordatorios por SMS, incluyendo la comunicación externa.}
+\req{E02}{Funcional}{Producto}{Software}{No aplica}{Define la función de enviar recordatorios 24 horas antes; el servicio SMS externo actúa como dependencia.}
 \req{E03}{Calidad}{Producto}{Software}{Eficiencia de desempeño / Comportamiento temporal}{Pide rapidez, pero no define operación, carga ni tiempo medible.}
 \req{E04}{Funcional}{Producto}{Software}{No aplica}{Especifica registrar la llegada de pacientes desde recepción.}
 \req{E05}{Restricción técnica}{Producto}{Software}{No aplica}{Impone Java 21 y PostgreSQL como tecnologías de implementación.}
 \req{E06}{Funcional}{Producto}{Software}{No aplica}{Especifica consultar la agenda y marcar consultas atendidas.}
 \req{E07}{Calidad}{Producto}{Sistema}{Seguridad / Confidencialidad}{Exige proteger datos sensibles, sin definir controles ni pruebas.}
 \req{E08}{Restricción técnica}{Producto}{Software}{No aplica}{Limita la compatibilidad de la aplicación a Android 10 o superior.}
-\req{E09}{Restricción de dominio}{Producto}{Software}{No aplica}{Impone la regla de negocio: cancelación tardía cuenta como inasistencia.}
-\req{E10}{Calidad}{Producto}{Sistema}{Capacidad de interacción / Inclusividad}{Exige facilidad de uso para adultos mayores, sin criterio observable.}
+\req{E09}{Funcional (regla de dominio)}{Producto}{Software}{No aplica}{Indica el comportamiento que registra como inasistencia toda cancelación realizada con menos de cuatro horas.}
+\req{E10}{Calidad}{Producto}{Sistema}{Capacidad de interacción / Inclusividad y operabilidad}{Busca que adultos mayores operen el sistema; no establece una medición observable.}
 \req{E11}{Restricción de plazo}{Proceso}{Sistema (proyecto)}{No aplica}{Fija el límite temporal para ejecutar y entregar el proyecto.}
 \req{E12}{Funcional}{Producto}{Software}{No aplica}{Define una acción automática tras diez minutos de inactividad.}
 \req{E13}{Funcional}{Producto}{Sistema}{No aplica}{Describe conducta conjunta de pantalla táctil, aplicación e impresora.}

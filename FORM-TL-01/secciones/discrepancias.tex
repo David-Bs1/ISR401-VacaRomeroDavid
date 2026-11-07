@@ -1,11 +1,19 @@
-\textbf{Registro pendiente de contraste real.} El enunciado exige comparar la clasificación con un compañero. Todavía no se ha proporcionado evidencia de una comparación realizada; por integridad académica no se consignan acuerdos inventados.
+% Contraste documental entre dos matrices de trabajo. No atribuir acuerdos o reuniones no celebrados.
+El 7 de noviembre de 2026 se realizó un \textbf{contraste documental} entre la matriz de este repositorio y la publicada por Angelo Maximiliano Espinoza Pivaque en \url{https://github.com/Espinoza-A-1006/ISR401-EspinozaAngelo}~\cite{angelo2026}. El material compartido contiene E01--E20; el archivo fuente consultado repite E03 y E04, por lo que se comparó una sola vez cada identificador. \textbf{No se documentó reunión ni acuerdo bilateral}: las resoluciones siguientes son decisiones técnicas razonadas para esta entrega individual.
 
-Se propone revisar especialmente E09 (regla de negocio frente a requisito funcional), E12 (acción funcional que protege la sesión) y E16 (restricción del proceso). Después del diálogo, se completará la tabla con las posturas reales y la conclusión fundamentada.
-
-{\small
-\begin{longtable}{|p{1.2cm}|p{3.2cm}|p{3.2cm}|p{5.2cm}|}
+{\footnotesize
+\begin{longtable}{|p{0.8cm}|p{2.4cm}|p{2.55cm}|p{7.1cm}|}
 \hline
-\textbf{ID} & \textbf{Mi criterio inicial} & \textbf{Criterio del compañero} & \textbf{Resolución y argumento}\ \\ \hline
-Por completar & Por completar después del intercambio real. & No registrado aún. & No registrado aún.\\ \hline
+\textbf{ID} & \textbf{Criterio inicial de David} & \textbf{Criterio de Angelo} & \textbf{Decisión técnica razonada de David} \\ \hline
+\endfirsthead
+\hline \textbf{ID} & \textbf{David (inicial)} & \textbf{Angelo} & \textbf{Decisión y fundamento} \\ \hline
+\endhead
+E02 & Funcional, producto, \textbf{sistema}. & Funcional, producto, \textbf{software}. & Se adopta \textbf{software}: el enunciado especifica el envío automático de un SMS desde la plataforma. El operador de mensajería es una dependencia externa, no un requisito del sistema completo. \\ \hline
+E09 & \textbf{Restricción de dominio}, producto, software. & \textbf{Funcional}, derivado de regla de negocio; producto, software. & Se adopta \textbf{funcional (derivado de regla de dominio)}: la norma de cuatro horas procede del negocio, pero el enunciado prescribe una acción verificable del software, registrar la cancelación tardía como inasistencia. La procedencia de la regla se conserva en la justificación. \\ \hline
+E10 & Calidad: capacidad de interacción / \textbf{inclusividad}. & Calidad: capacidad de interacción / \textbf{operabilidad e inclusividad}. & No hay contradicción de tipo ni nivel. Se incorporan ambas subcaracterísticas como relevantes: inclusión para personas mayores y facilidad de operación al reservar o usar el quiosco. El requisito original continúa siendo no verificable. \\ \hline
 \end{longtable}
 }
+
+\textbf{Contraste de umbrales (E14).} Las dos propuestas coinciden en \emph{fiabilidad/disponibilidad}, pero difieren en su cuantificación. David propuso 99,5\,\% durante el horario de atención (lunes a sábado, 07:00--19:00), mientras que Angelo propuso 99,99\,\% sobre 24 horas al día. Se conserva provisionalmente la propuesta de esta entrega; es indispensable validar con el policlínico si las reservas deben estar operativas fuera del horario de consulta. Ninguno de los dos umbrales consta como acuerdo del cliente ni resultado de medición.
+
+\textbf{Alcance de la evidencia.} Compartir y revisar repositorios permite comparar criterios escritos, pero no demuestra que ambos estudiantes hayan discutido o ratificado estas decisiones conjuntamente. Esta limitación se declara para evitar atribuir una discusión inexistente.
