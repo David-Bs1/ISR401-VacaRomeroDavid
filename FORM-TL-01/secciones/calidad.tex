@@ -1,14 +1,19 @@
-% No convertir valores propuestos en datos observados: son umbrales a negociar y validar.
-Identifique la característica y subcaracterística correspondiente y proponga valores medibles\cite{iso25010}. Los umbrales han de justificarse con datos del caso (p.\,ej., unas 300 sesiones simultáneas y dispositivos Android de gama media/baja), y no inventarse como acuerdos ya aprobados.
+% Umbrales propuestos para validación con las partes interesadas; NO son resultados medidos.
+Se reformulan los cinco enunciados vagos. Los valores son \textbf{propuestas de aceptación que deben negociarse}, no valores ya acordados ni mediciones reales. Se toma como referencia el pico estimado de 300 usuarios simultáneos y el uso frecuente de Android de gama media/baja descritos en el caso.
 
-{\small
-\begin{longtable}{|p{1.0cm}|p{3.0cm}|p{5.7cm}|p{3.8cm}|}
+{\footnotesize
+\begin{longtable}{|p{1.0cm}|p{2.5cm}|p{6.4cm}|p{3.6cm}|}
 \hline
-\textbf{ID} & \textbf{Problema de redacción} & \textbf{Redacción mejorada (métrica y umbral)} & \textbf{Método de verificación}\\ \hline
-E03 & ``La aplicación debe ser rápida''. & Pendiente: definir operación, tiempo máximo, porcentaje de solicitudes y carga de usuarios. & Pendiente. \\ \hline
-E07 & ``Los datos de salud de los pacientes deben estar seguros''. & Pendiente: definir controles comprobables, tipo de acceso y evidencia de cumplimiento. & Pendiente. \\ \hline
-E10 & ``Debe ser fácil de usar para adultos mayores''. & Pendiente: definir tareas, población de prueba, tasa de éxito y tiempo máximo. & Pendiente. \\ \hline
-E14 & ``La plataforma debe estar siempre disponible''. & Pendiente: definir porcentaje de disponibilidad y período de medición. & Pendiente. \\ \hline
-E18 & ``Debe integrarse sin problemas con facturación''. & Pendiente: definir operación de integración, resultado esperado y tolerancia a errores. & Pendiente. \\ \hline
+\textbf{ID} & \textbf{Calidad ISO/IEC 25010:2023} & \textbf{Redacción medible propuesta} & \textbf{Verificación prevista}\\ \hline
+\endfirsthead
+\hline \textbf{ID} & \textbf{Característica} & \textbf{Criterio cuantificado} & \textbf{Prueba prevista}\\ \hline
+\endhead
+E03 & Eficiencia de desempeño / comportamiento temporal & Con 300 sesiones concurrentes, al menos el 95\% de consultas de horarios disponibles responderá en 3 segundos o menos durante una prueba de 30 minutos. & Prueba de carga: tiempo por solicitud en segundos; calcular percentil 95. \\ \hline
+E07 & Seguridad / confidencialidad & El sistema impedirá la lectura de datos de salud por usuarios sin un permiso autorizado en el 100\% de un conjunto de 100 pruebas de acceso denegado por rol. & Ejecutar 100 intentos de consulta sin autorización; contar accesos indebidos (meta: 0). \\ \hline
+E10 & Capacidad de interacción / inclusividad & Al menos 17 de 20 participantes de 60 años o más completarán sin ayuda una reserva en 5 minutos o menos utilizando Android 10 o superior de gama media/baja. & Prueba con participantes reales: registrar éxito, ayuda requerida y duración en minutos. \\ \hline
+E14 & Fiabilidad / disponibilidad & La plataforma estará operativa al menos el 99,5\% del tiempo programado de atención (lunes a sábado, 07:00--19:00), calculado en cada mes calendario. & Monitorización mensual: minutos disponibles / minutos programados $\times 100$. \\ \hline
+E18 & Compatibilidad / interoperabilidad & En un entorno de pruebas conectado con la API documentada del proveedor de facturación, al menos 99 de 100 solicitudes válidas de registro de cobro producirán una confirmación correcta en 5 segundos o menos. & Prueba de 100 integraciones válidas; verificar respuesta, coincidencia de datos y tiempo en segundos. \\ \hline
 \end{longtable}
 }
+
+\textbf{Límites de estas propuestas:} el caso no establece acuerdos de nivel de servicio, permisos detallados ni diseño de API. Por tanto, esos elementos necesitan validación con el director médico, el área de TI y el proveedor. La prueba con adultos mayores no debe simular participantes o resultados.

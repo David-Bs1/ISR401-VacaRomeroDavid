@@ -1,22 +1,23 @@
-% FORM-TL-01 - Clasificacion individual. No entregar con celdas pendientes.
-% Sintaxis: \req{ID}{tipo (funcional/calidad/restriccion)}{producto/proceso}{sistema/software}{ISO 25010 o No aplica}{justificacion}
-\req{E01}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E02}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E03}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E04}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E05}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E06}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E07}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E08}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E09}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E10}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E11}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E12}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E13}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E14}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E15}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E16}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E17}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E18}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E19}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
-\req{E20}{Pendiente}{Pendiente}{Pendiente}{Pendiente}{Pendiente de justificar.}
+% Clasificación propuesta para revisión académica. Verificar criterios discutibles con docente.
+% E09 se trata como restricción del dominio; podría analizarse como función regida por regla de negocio.
+% Campos: código, tipo, producto/proceso, sistema/software, ISO, justificación
+\req{E01}{Funcional}{Producto}{Software}{No aplica}{Define la operación de reservar una cita y seleccionar sus parámetros.}
+\req{E02}{Funcional}{Producto}{Sistema}{No aplica}{Exige enviar recordatorios por SMS, incluyendo la comunicación externa.}
+\req{E03}{Calidad}{Producto}{Software}{Eficiencia de desempeño / Comportamiento temporal}{Pide rapidez, pero no define operación, carga ni tiempo medible.}
+\req{E04}{Funcional}{Producto}{Software}{No aplica}{Especifica registrar la llegada de pacientes desde recepción.}
+\req{E05}{Restricción técnica}{Producto}{Software}{No aplica}{Impone Java 21 y PostgreSQL como tecnologías de implementación.}
+\req{E06}{Funcional}{Producto}{Software}{No aplica}{Especifica consultar la agenda y marcar consultas atendidas.}
+\req{E07}{Calidad}{Producto}{Sistema}{Seguridad / Confidencialidad}{Exige proteger datos sensibles, sin definir controles ni pruebas.}
+\req{E08}{Restricción técnica}{Producto}{Software}{No aplica}{Limita la compatibilidad de la aplicación a Android 10 o superior.}
+\req{E09}{Restricción de dominio}{Producto}{Software}{No aplica}{Impone la regla de negocio: cancelación tardía cuenta como inasistencia.}
+\req{E10}{Calidad}{Producto}{Sistema}{Capacidad de interacción / Inclusividad}{Exige facilidad de uso para adultos mayores, sin criterio observable.}
+\req{E11}{Restricción de plazo}{Proceso}{Sistema (proyecto)}{No aplica}{Fija el límite temporal para ejecutar y entregar el proyecto.}
+\req{E12}{Funcional}{Producto}{Software}{No aplica}{Define una acción automática tras diez minutos de inactividad.}
+\req{E13}{Funcional}{Producto}{Sistema}{No aplica}{Describe conducta conjunta de pantalla táctil, aplicación e impresora.}
+\req{E14}{Calidad}{Producto}{Sistema}{Fiabilidad / Disponibilidad}{Pide disponibilidad permanente sin periodo ni porcentaje verificable.}
+\req{E15}{Funcional}{Producto}{Software}{No aplica}{Define la generación de reportes mensuales por especialidad.}
+\req{E16}{Restricción de proceso}{Proceso}{Sistema (proyecto)}{No aplica}{Determina cómo y con quién validar las iteraciones quincenales.}
+\req{E17}{Restricción legal}{Producto}{Sistema}{No aplica}{Impone conformidad con la normativa ecuatoriana sobre datos personales.}
+\req{E18}{Calidad}{Producto}{Sistema}{Compatibilidad / Interoperabilidad}{Exige intercambio correcto con facturación externa, sin criterio medible.}
+\req{E19}{Calidad}{Producto}{Sistema}{Fiabilidad / Recuperabilidad}{Fija recuperación menor de 30 minutos y cero pérdida de citas.}
+\req{E20}{Restricción de proceso}{Proceso}{Software (desarrollo)}{No aplica}{Obliga a revisar cambios antes de integrarlos al código principal.}
