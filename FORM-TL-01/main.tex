@@ -37,7 +37,7 @@ Fecha de entrega (SGA): & 7 de noviembre de 2026\\
 Clasificar los 20 enunciados del caso de estudio en las dimensiones especificadas por la guía del taller: tipo de requisito, producto/proceso y sistema/software. Cuando corresponda, identificar la característica y subcaracterística de calidad según ISO/IEC 25010:2023~\cite{iso25010}. Fundamentar las decisiones mediante definiciones de ingeniería de requisitos~\cite{iso29148}.
 
 \section{Matriz de clasificación (E01--E20)}
-La siguiente matriz es una propuesta argumentada que debe contrastarse con el material de la asignatura. Los enunciados originales se incluyen como anexo para mantener la trazabilidad. En los requisitos de proceso, el nivel \emph{sistema/software} se interpreta como el \emph{ámbito de trabajo}; no describe una función del producto. E09 se identifica como restricción del dominio por ser una regla de negocio, aunque su implementación también conlleva comportamiento funcional.
+La siguiente matriz es una propuesta argumentada que debe contrastarse con el material de la asignatura. Los enunciados originales se incluyen como anexo para mantener la trazabilidad. En los requisitos de proceso, el nivel \emph{sistema/software} se interpreta como el \emph{ámbito de trabajo}; no describe una función del producto. E09 se clasifica como funcional porque ordena registrar un estado; su origen es una regla de dominio. En E02 se toma como frontera de la solución el software que emite el recordatorio, no el servicio de telecomunicaciones.
 
 {\footnotesize
 \begin{longtable}{|p{0.9cm}|p{1.9cm}|p{1.7cm}|p{1.6cm}|p{2.7cm}|p{5.2cm}|}
@@ -55,15 +55,16 @@ La siguiente matriz es una propuesta argumentada que debe contrastarse con el ma
 \section{Cuantificación de los cinco requisitos vagos}
 \input{secciones/calidad.tex}
 
-\section{Discusión y discrepancias reales}
+\section{Comparación documental de criterios y discrepancias}
 \input{secciones/discrepancias.tex}
 
 \section{Uso de herramientas de inteligencia artificial}
-ChatGPT (GPT-6) se utilizó como apoyo para redactar una \emph{propuesta inicial} de clasificación, criterios de medición, estructura LaTeX y README. Se comprobó técnicamente la compilación; la verificación conceptual por el estudiante, el contraste de fuentes institucionales y la discusión con un compañero quedan a su cargo antes de presentar la versión definitiva. No se han inventado pruebas, participantes ni resultados.
+ChatGPT (GPT-6) se utilizó como apoyo para estructurar LaTeX, redactar propuestas de clasificación y métricas, comparar documentalmente los archivos aportados y verificar la compilación. Se contrastaron los enunciados del caso y las matrices disponibles; las decisiones argumentadas y los umbrales siguen sujetos a revisión académica y validación de interesados. No se atribuyen conversaciones, acuerdos, pruebas de campo o resultados inexistentes.
 
 \begin{thebibliography}{9}
 \bibitem{iso29148} ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 29148:2018, Systems and software engineering --- Life cycle processes --- Requirements engineering}, 2018.
 \bibitem{iso25010} ISO/IEC, \emph{ISO/IEC 25010:2023, Systems and software engineering --- Systems and software Quality Requirements and Evaluation (SQuaRE) --- Product quality model}, 2023.
+\bibitem{angelo2026} A. M. Espinoza Pivaque, "FORM-TL-01: Taller de tipos de requisitos", repositorio académico \emph{ISR401-EspinozaAngelo}, GitHub, 2026. [En línea]. Disponible: \url{https://github.com/Espinoza-A-1006/ISR401-EspinozaAngelo}. Consultado el 7 de noviembre de 2026.
 \end{thebibliography}
 
 \appendix
