@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{left=2.1cm,right=2.1cm,top=2.1cm,bottom=2.1cm}
+\usepackage{array,longtable,booktabs,tabularx,xcolor,graphicx,caption}
+\usepackage{microtype,hyperref,enumitem,csquotes}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\addbibresource{referencias.bib}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=blue,
+  pdftitle={TA-IND-01 - IEEE 29148 y tipos de requisitos - Spotify},
+  pdfauthor={Vaca Romero David Octavio}}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.22}
+\captionsetup{font=small}
+\definecolor{uteqverde}{RGB}{0,108,62}
+
+\begin{document}
+\begin{center}
+{\small UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}\\
+{\small Facultad de Ciencias de la Computación y Diseño Digital -- Carrera de Ingeniería de Software}\\[5pt]
+{\Large\bfseries TA-IND-01: IEEE 29148 y tipos de requisitos de un sistema conocido}\\[3pt]
+{\normalsize Ingeniería de Requerimientos (ISR-401) -- 4.\textordmasculine{} nivel, paralelo A}
+\end{center}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}lX@{}}
+Caso: & Spotify (cliente de escritorio)\\
+Estudiante: & Vaca Romero David Octavio\\
+Docente: & PhD. Gleiston Cicerón Guerrero Ulloa\\
+Fecha de entrega (SGA): & 11 de noviembre de 2026\\
+\end{tabularx}
+
+\section{Objetivo y alcance}
+\input{secciones/contexto.tex}
+\noindent{\small\textit{Nota metodológica: los umbrales propuestos no equivalen a resultados medidos; el estudiante debe revisar y hacer suyo el análisis antes de entregarlo.}}
+
+\section{Resumen analítico de ISO/IEC/IEEE 29148:2018}
+\input{secciones/resumen.tex}
+
+\section{Glosario de la cláusula 3}
+\input{secciones/glosario.tex}
+
+\section{Clasificación de 15 requisitos de Spotify}
+\input{secciones/requisitos.tex}
+
+\section{Autoevaluación y versiones corregidas}
+\input{secciones/autoevaluacion.tex}
+
+\section{Capturas propias y trazabilidad}
+\input{secciones/evidencias.tex}
+
+\section{Reflexión crítica}
+\input{secciones/reflexion.tex}
+
+\section{Uso de herramientas de inteligencia artificial}
+\input{secciones/uso_ia.tex}
+
+\begingroup\footnotesize\sloppy\printbibliography[title={Referencias (estilo IEEE)}]\endgroup
+\end{document}
