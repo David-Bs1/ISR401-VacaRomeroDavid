@@ -1,0 +1,42 @@
+Cada fila expone una \emph{versión inicial ilustrativa} (con error deliberado), el defecto detectado según los criterios de las cláusulas 5.2.5 y 5.2.7, y la versión reformulada que aparece también en la tabla de clasificación. Para sostener la evaluación de las nueve características se necesita, además, contrastar necesidad, factibilidad y corrección con interesados; esa validación aún no se ha realizado \cite{iso29148}.
+\begingroup\scriptsize\renewcommand{\arraystretch}{1.09}
+\begin{longtable}{@{}p{.06\linewidth}p{.185\linewidth}p{.19\linewidth}p{.51\linewidth}@{}}\toprule
+\textbf{ID}&\textbf{Versión inicial}&\textbf{Defecto}&\textbf{Versión corregida}\\\midrule\endfirsthead
+\toprule\textbf{ID}&\textbf{Versión inicial}&\textbf{Defecto}&\textbf{Versión corregida}\\\midrule\endhead
+R-01 & Crear playlists de forma sencilla. & «sencilla» carece de criterio de aceptación. & La aplicación deberá permitir al usuario autenticado crear una lista de reproducción con un nombre introducido por él.\\\addlinespace[0pt]
+R-02 & Permitir guardar toda la música. & «toda la música» es una totalidad indefinida. & La aplicación deberá permitir al propietario agregar una canción disponible del catálogo a una lista de reproducción propia.\\\addlinespace[0pt]
+R-03 & Borrar canciones rápido. & «rápido» no define tiempo ni resultado. & La aplicación deberá permitir al propietario eliminar una canción de una lista de reproducción propia.\\\addlinespace[0pt]
+R-04 & Buscar canciones adecuadamente. & «adecuadamente» carece de alcance. & La aplicación deberá mostrar resultados de canciones cuyos metadatos coincidan con un título consultado en el buscador.\\\addlinespace[0pt]
+R-05 & Reproducir música sin problemas. & «sin problemas» es absoluto e impreciso. & La aplicación deberá permitir iniciar la reproducción de una pista disponible desde su ficha o resultado de búsqueda, según el plan del usuario.\\\addlinespace[0pt]
+R-06 & Mostrar buena información del reproductor. & «buena» es subjetivo. & La interfaz de reproducción deberá presentar el título y el artista de la pista activa en el área de reproducción.\\\addlinespace[0pt]
+R-07 & Conectar fácilmente todos los dispositivos. & «todos» no delimita compatibilidad. & La aplicación deberá mostrar los dispositivos de reproducción compatibles detectados al abrir el selector de Spotify Connect.\\\addlinespace[0pt]
+R-08 & Descargar música cuando se pueda. & «cuando se pueda» abre una excepción vaga. & La aplicación deberá habilitar la descarga de canciones para escucha sin conexión únicamente en cuentas con una suscripción Premium elegible.\\\addlinespace[0pt]
+R-09 & Tener atajos útiles. & «útiles» es una valoración subjetiva. & La interfaz de escritorio deberá ofrecer un atajo documentado para ejecutar la función reproducir o pausar.\\\addlinespace[0pt]
+R-10 & Los botones deben ser claros. & «claros» no se verifica sin condición. & La interfaz deberá identificar mediante una etiqueta textual el control para crear una lista de reproducción.\\\addlinespace[0pt]
+R-11 & La búsqueda debe ser muy rápida. & «muy rápida» no cuantifica el tiempo. & La búsqueda deberá presentar resultados en un máximo de 3 segundos en al menos 19 de 20 consultas, con red de 10 Mb/s y equipo de prueba fijado.\\\addlinespace[0pt]
+R-12 & Cualquier persona aprende rápido. & «cualquier» es totalidad, y «rápido» no mide. & Al menos 4 de 5 participantes nuevos deberán crear una lista de reproducción sin ayuda en 120 segundos o menos, con la misma versión del cliente.\\\addlinespace[0pt]
+R-13 & La aplicación nunca se cae. & «nunca» implica garantía absoluta. & El cliente de escritorio deberá completar 30 alternancias de reproducción y pausa sin cerrarse inesperadamente en el equipo de prueba definido.\\\addlinespace[0pt]
+R-14 & Los datos deben estar seguros. & «seguros» no especifica qué se protege. & Durante cinco pruebas de sesión privada, ninguna pista reproducida deberá aparecer en la actividad de escucha visible desde la cuenta de observación autorizada.\\\addlinespace[0pt]
+R-15 & Spotify Connect debe sincronizar al instante. & «al instante» no fija el límite temporal. & Al cambiar de dispositivo mediante Spotify Connect, el nuevo dispositivo deberá reflejar la pista activa en 5 segundos o menos en al menos 9 de 10 pruebas locales.\\\addlinespace[0pt]
+\bottomrule\end{longtable}\endgroup
+\textbf{Revisión inicial de nueve características.} Leyenda: N=necesario, A=apropiado, U=no ambiguo, C=completo, S=singular, F=factible, V=verificable, R=correcto, T=conforme. \emph{L} significa revisión lingüística preliminar favorable y \emph{P} requiere contrastar el caso real o completar el protocolo. No representa una validación realizada.
+\begin{center}\scriptsize
+\begin{tabular}{@{}lccccccccc@{}}\toprule
+ID & N & A & U & C & S & F & V & R & T\\\midrule
+R-01 & P & L & L & L & L & P & L & P & L\\
+R-02 & P & L & L & L & L & P & L & P & L\\
+R-03 & P & L & L & L & L & P & L & P & L\\
+R-04 & P & L & L & L & L & P & L & P & L\\
+R-05 & P & L & P & P & L & P & P & P & L\\
+R-06 & P & L & L & L & L & P & L & P & L\\
+R-07 & P & L & P & P & L & P & P & P & L\\
+R-08 & P & L & L & L & L & P & L & P & L\\
+R-09 & P & L & L & L & L & P & L & P & L\\
+R-10 & P & L & P & P & L & P & P & P & L\\
+R-11 & P & L & P & P & L & P & P & P & L\\
+R-12 & P & L & L & P & L & P & P & P & L\\
+R-13 & P & L & P & P & L & P & P & P & L\\
+R-14 & P & L & P & P & L & P & P & P & L\\
+R-15 & P & L & P & P & L & P & P & P & L\\\bottomrule
+\end{tabular}\end{center}
+\textbf{Lectura crítica:} los R-05, R-07 y R-10 requieren delimitar la versión y el contexto; R-11 a R-15 necesitan fijar un entorno de prueba y recopilar datos antes de declararlos aceptados. Los criterios N, F y R no se verifican solo con gramática.
