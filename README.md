@@ -1,29 +1,50 @@
 # Ingeniería de Requerimientos (ISR-401)
 
-Repositorio personal de **Vaca Romero David Octavio** de la carrera de Ingeniería de Software, Universidad Técnica Estatal de Quevedo. Las actividades están organizadas en carpetas independientes.
+Repositorio académico personal de **Vaca Romero David Octavio**, estudiante de Ingeniería de Software de la **Universidad Técnica Estatal de Quevedo (UTEQ)**.
 
-## FORM-TL-01: Identificación y clasificación de tipos de requisitos
+**Asignatura:** Ingeniería de Requerimientos (ISR-401)  
+**Nivel y paralelo:** Cuarto nivel, Software A  
+**Docente:** PhD. Gleiston Cicerón Guerrero Ulloa
 
-**Estado:** versión con clasificación E01–E20, cinco requisitos de calidad cuantificados y contraste documental con el repositorio de Angelo Espinoza. **El contraste documental no demuestra una conversación ni un acuerdo bilateral**, y la revisión académica del estudiante sigue siendo necesaria.
+## Actividades del repositorio
 
-**Caso:** Plataforma de gestión de citas médicas (material del docente).
+| Actividad | Tema y caso de estudio | Documentos |
+|---|---|---|
+| **FORM-TL-01** | Identificación y clasificación de 20 enunciados de requisitos. Caso: plataforma de gestión de citas médicas. Incluye requisitos de calidad cuantificados y contraste documental. | [Informe](FORM-TL-01/main.pdf) · [Fuente LaTeX](FORM-TL-01/main.tex) · [Portada SGA](FORM-TL-01/portada_sga.pdf) |
+| **TA-IND-01 / TA-TAR-01** | Análisis de ISO/IEC/IEEE 29148:2018 y tipos de requisitos de **Spotify**. Incluye glosario, 15 requisitos, autoevaluación y tres capturas propias. | [Guía de la actividad](TA-IND-01/README.md) · [Informe](TA-IND-01/main.pdf) · [Fuente LaTeX](TA-IND-01/main.tex) · [Portada SGA](TA-IND-01/portada_sga.pdf) |
 
-### Estructura de archivos
+Cada actividad se guarda en una carpeta independiente. Los archivos `.tex` son las fuentes editables; los archivos `.pdf` corresponden a las versiones compiladas. Las portadas del SGA son distintas de los informes académicos completos.
 
-- `FORM-TL-01/main.tex`: fuente principal del documento académico.
-- `FORM-TL-01/main.pdf`: PDF compilado del documento académico (NO es el PDF que se entrega directamente al SGA).
-- `FORM-TL-01/secciones/requisitos.tex`: clasificación en tres dimensiones y justificación E01–E20.
-- `FORM-TL-01/secciones/calidad.tex`: reformulación cuantificada de E03, E07, E10, E14 y E18.
-- `FORM-TL-01/secciones/discrepancias.tex`: contraste documental con el trabajo de Angelo Espinoza, diferencias verificadas y decisiones técnicas argumentadas. No se declara una discusión oral o un acuerdo entre ambos.
-- `FORM-TL-01/secciones/enunciados.tex`: enunciados proporcionados por el docente.
-- `FORM-TL-01/portada_sga.tex`: fuente de la portada informativa.
-- `FORM-TL-01/portada_sga.pdf`: carátula de una página con la URL del repositorio para subir al SGA.
+## Estructura
 
-### Compilar los PDF
+```text
+ISR401-VacaRomeroDavid/
+├── .gitignore
+├── README.md
+├── FORM-TL-01/
+│   ├── main.tex
+│   ├── main.pdf
+│   ├── portada_sga.tex
+│   ├── portada_sga.pdf
+│   └── secciones/
+└── TA-IND-01/
+    ├── README.md
+    ├── main.tex
+    ├── main.pdf
+    ├── referencias.bib
+    ├── portada_sga.tex
+    ├── portada_sga.pdf
+    ├── figuras/
+    └── secciones/
+```
 
-**Compilador:** pdfLaTeX (`pdflatex`), por ejemplo con TeX Live o MiKTeX. Paquetes necesarios: `babel` (español), `fontenc`, `inputenc`, `lmodern`, `geometry`, `array`, `longtable`, `booktabs`, `tabularx`, `xcolor`, `microtype`, `hyperref` y `enumitem`.
+## Compilación reproducible
 
-Desde la raíz del repositorio, ejecutar en este orden:
+Se necesita una distribución **TeX Live** o **MiKTeX** con **pdfLaTeX**; para TA-IND-01 también se requiere **Biber** y `biblatex`. Se deben instalar los paquetes LaTeX utilizados en los preámbulos de cada `main.tex` (entre ellos `babel` para español, `geometry`, `longtable`, `graphicx` y `hyperref`).
+
+Desde la raíz del repositorio, ejecutar los comandos correspondientes a la actividad.
+
+### FORM-TL-01
 
 ```bash
 cd FORM-TL-01
@@ -32,21 +53,27 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error portada_sga.tex
 ```
 
-**Alternativa sin instalar LaTeX:** importar la carpeta `FORM-TL-01` completa en Overleaf, seleccionar `main.tex` como archivo principal, compilar con pdfLaTeX y descargar el PDF. El PDF descargado debe colocarse en `FORM-TL-01/main.pdf` del repositorio.
+### TA-IND-01
 
-### Revisión antes de entregar
+```bash
+cd TA-IND-01
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+biber main
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error portada_sga.tex
+```
 
-1. Revisar cada clasificación y las características/subcaracterísticas ISO/IEC 25010:2023 frente a las fuentes disponibles.
-2. Revisar las cinco métricas como propuestas de aceptación, no presentarlas como acuerdos ni mediciones reales.
-3. Revisar el contraste documental con el trabajo de Angelo Espinoza y, si se realiza un diálogo adicional, registrar por separado los acuerdos que efectivamente se alcancen.
-4. Verificar la declaración de apoyo de IA en `main.tex`, las fuentes y la comparación antes de presentarla como propia.
-5. Regenerar `main.pdf` **después de la última modificación** de cualquier archivo `.tex`, publicarlo y comprobar que coincide con el contenido de la fuente.
-6. Revisar que `portada_sga.pdf` tenga exactamente una página y que la URL escrita en ella sea accesible.
+Para ejecutar ambos bloques en una misma terminal, regresar antes a la raíz del repositorio (`cd ..`). El detalle de dependencias, evidencias y límites de la actividad de Spotify está documentado en **[TA-IND-01/README.md](TA-IND-01/README.md)**.
 
-**Entrega SGA:** subir únicamente `FORM-TL-01/portada_sga.pdf` (una página, menor de 1 MB), una vez terminado y actualizado el repositorio. Según el registro del SGA compartido, la fecha límite es 7 de noviembre de 2026, 23:59 (Ecuador). La guía PDF original contiene una fecha y modalidad distintas; confirmar cualquier cambio oficial del docente.
+## Evidencias e integridad académica
 
-Los commits deben describir cambios reales y verificables; no simular historial de trabajo.
+- **FORM-TL-01:** el contraste con otro repositorio es documental; no se presenta como un diálogo o acuerdo bilateral.
+- **TA-IND-01:** las tres capturas de Spotify fueron aportadas por el estudiante. Los umbrales de calidad son **criterios de aceptación propuestos**, no resultados de pruebas realizadas.
+- Las fuentes, declaraciones de apoyo con IA y limitaciones deben revisarse en los documentos de cada actividad. El historial de Git debe describir cambios reales.
 
-### Evidencia de comparación documental
+## Entrega en el SGA
 
-Se contrastó la clasificación individual con la fuente facilitada del repositorio de Angelo: https://github.com/Espinoza-A-1006/ISR401-EspinozaAngelo (copia ZIP compartida el 7 de noviembre de 2026). Se detectaron diferencias principales en **E02** y **E09**, un matiz en **E10** y un umbral alternativo para **E14**. Las decisiones explicadas en el PDF son criterios académicos propuestos por David, **no acuerdos ni conversaciones atribuidos a Angelo**. La fuente de Angelo duplicaba E03 y E04 en su `main.tex`; fueron comparados una sola vez.
+Para cada actividad, el SGA solicita únicamente su **portada informativa de una página**, con la dirección completa y pública de este repositorio en una sola línea. El informe, sus fuentes y las evidencias permanecen en GitHub.
+
+**Repositorio:** https://github.com/David-Bs1/ISR401-VacaRomeroDavid
